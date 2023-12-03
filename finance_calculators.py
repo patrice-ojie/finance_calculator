@@ -3,7 +3,7 @@ calculators: an investment calculator and a home loan repayment calculator."""
 import math
 # The section is an introduction to the options that are available so the user can make an informed choice
 print("Welcome to this Finance Calculator\nInvestment - to calculate the amount of interest "
-      "you'll learn on your investment\nLoan - to calculate the amount you'll have to pay on a home loan\n")
+      "you'll earn on your investment\nBond - to calculate the amount you'll have to pay on a home loan\n")
 user_choice = input("Enter either 'investment' or 'bond' from the menu above to proceed: ")
 
 lower_case_choice = user_choice.lower()
