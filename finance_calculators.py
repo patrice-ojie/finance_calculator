@@ -16,7 +16,7 @@ if user_choice == "investment":
     while True:
         try:
             deposit = float(input("How much money are you depositing? £"))
-            interest_rate = float(input("What is the interest rate. Please only enter the value, the '%' sign isn't "
+            int_rate = float(input("What is the interest rate. Please only enter the value, the '%' sign isn't "
                                         "needed: "))
             years = int(input("How many years do you want to invest for? "))
             break
@@ -30,10 +30,10 @@ if user_choice == "investment":
         else:
             break
     if interest_type == "simple":
-        simple_return = deposit*(1 + (interest_rate/100)*years)
+        simple_return = deposit*(1 + (int_rate/100)*years)
         print(f"You will have £{simple_return:.2f} after {years} years with a deposit of £{deposit:.2f}")
     else:
-        compound_return = round(deposit*math.pow((1+interest_rate/100), years), 2)
+        compound_return = round(deposit*math.pow((1+int_rate/100), years), 2)
         print(f"You will have £{compound_return} after {years} years with a deposit of £{deposit}")
 # This section works out the return on a bond
 else:
