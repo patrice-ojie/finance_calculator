@@ -47,5 +47,5 @@ else:
             break
         except Exception:
             print("You have entered an invalid value. Please try again.")
-    monthly_repayment = (monthly_interest*house_value)/(1-(1+monthly_interest)**(-months))
-    print(f"Your monthly repayment will be £{monthly_repayment:.2f}")
+    month_fee = (monthly_interest*house_value)/(1-(1+monthly_interest)**(-months))
+    print(f"Your monthly repayment will be £{month_fee:.2f}")
