@@ -20,7 +20,7 @@ if user_choice == "investment":
                                         "needed: "))
             years = int(input("How many years do you want to invest for? "))
             break
-        except Exception:
+        except ValueError:
             print("You have entered an invalid value. Please try again.")
     interest_type = input("Do you want simple or compound interest? ").lower()
     
@@ -45,7 +45,7 @@ else:
             monthly_interest = house_interest/1200
             months = int(input("How many months will it take for you to repay the bond? "))
             break
-        except Exception:
+        except ValueError:
             print("You have entered an invalid value. Please try again.")
     month_fee = (monthly_interest*house_value)/(1-(1+monthly_interest)**(-months))
     print(f"Your monthly repayment will be £{month_fee:.2f}")
